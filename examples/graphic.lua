@@ -39,7 +39,6 @@ Application{
 	description = "Small application with some data",
 	output	= "graphicWebMap",
 
-
 	data = View{
 		color = "RdYlGn",
 		select  = "id_1",
@@ -57,6 +56,7 @@ Application{
 
 			------ Creat Graphic -----------
 			local GRAPHIC01 = {
+				layout = "line", -- layout item is optional "bar, line, radar"
 				id = 0, -- madatory start at zero
 				title = "Data of "..cell.id_1,
 				columns = {
@@ -117,6 +117,8 @@ Application{
 					} -- end values
 				} -- end table
 			report:addGraphic(GRAPHIC01)
+
+			report:addMatrix(GRAPHIC01)
 
 			return report
 		end

@@ -182,7 +182,7 @@
 						{{/heading}}
 						{{#graphic}}
 						<!-- Function addGraphic -->
-							<table class="{{class}} table table-hover {{select}}-{{id}} hidden" id="data">
+							<table class="{{layout}} table table-hover {{select}}-{{id}} hidden" id="data">
 								<tr>
 									{{#title}}<th colspan="100%" class="text-center">{{title}}</th>{{/title}}
 								</tr>
@@ -206,25 +206,26 @@
 						{{/graphic}}
 						{{#matrix}}
 						<!-- Function addTable -->
-						<div>
-							<table class="{{class}} table table-hover table-responsive" id="data">
-								<tr>
-									{{#title}}<th colspan="100%" class="text-center">{{title}}</th>{{/title}}
-								</tr>
-								<tr>
-									{{#columns}}
-										<th>{{#.}}{{.}}{{/.}}</th>
-									{{/columns}}
-								</tr>
-									{{#values}}
-										<tr>
-											{{#.}}<td>{{.}}</td>{{/.}}
-										</tr>
-									{{/values}}
-							</table>
-						</div>
+							<div class="table-responsive">
+								<table class="table {{layout}} table-hover table-responsive" id="data">
+									<tr>
+										{{#title}}<th colspan="100%" class="text-center">{{title}}</th>{{/title}}
+									</tr>
+									<tr>
+										{{#columns}}
+											<th>{{#.}}{{.}}{{/.}}</th>
+										{{/columns}}
+									</tr>
+										{{#values}}
+											<tr>
+												{{#.}}<td>{{.}}</td>{{/.}}
+											</tr>
+										{{/values}}
+								</table>
+							</div>
 						{{/matrix}}
-						{{#mult}}<!-- Function addMult-->
+						{{#mult}}
+						<!-- Function addMult-->
 							<p class="custom-font-body">{{.}}</p>
 						{{/mult}}
 						{{#image}}
@@ -235,8 +236,8 @@
 							<p class="custom-font-body">{{text}}</p>
 						{{/text}}
 						{{#separator}}<hr>{{/separator}}
-						<!-- Function add Video Youtube/Vimeo -->
 						{{#video}}
+						<!-- Function add Video Youtube/Vimeo -->
 							<center>
 								<iframe width="{{width}}" height="{{heigh}}" src="{{url}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 								</iframe>
@@ -291,7 +292,7 @@
 		<script type="text/javascript" src="./{{config}}"></script>
 		<script type="text/javascript" src="./publish.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-		<script type="text/javascript" src="./graphic.js"></script>
+		<script type="text/javascript" src="./graphic.js"></script>-->
 		<script type="text/javascript" src="./player.js"></script>
 
 	</body>

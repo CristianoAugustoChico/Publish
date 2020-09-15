@@ -53,7 +53,8 @@ Application{
 
 			------ Creat Table -----------
 			local Table = {
-				title = "Table of "..cell.id_1,
+				layout = "table-striped", -- layout item is optional
+				title = "Tabela Padrão",
 				columns = {
 						"area01",
 						"area02",
